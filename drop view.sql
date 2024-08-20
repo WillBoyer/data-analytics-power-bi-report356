@@ -1,0 +1,1 @@
+drop view store_sales
