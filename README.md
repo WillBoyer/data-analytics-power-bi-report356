@@ -80,6 +80,8 @@ The `Geography` hierarchy (part of the `Stores` table) is as follows:
 - `Country`
 - `Country Region`
 
+![Data Model]()
+
 ## Customer Detail Page
 ### Headline Card Visuals
 Card visuals were created to show the number of unique customers, and the average revenue generated per customer. These visuals were created by selecting "Card" from the "Build" pane, and then dragging-and-dropping the corresponding measure to the card.
@@ -115,7 +117,7 @@ The "Full Name" field is show by simply dragging-and-dropping the "Top Customer"
 ### Date Slicer
 A new date slicer was created by selecting the "Slicer" option from the "Build" pane, and setting the field to "Year" from the "Dates" table. In "Format" > "Sicer settings" > "Options", "Style" was set to "Between", which allows for a minimum and maximum year to be selected by the user.
 
-
+![Customer Detail Page](https://github.com/WillBoyer/data-analytics-power-bi-report356/blob/main/screenshots/Customers.PNG)
 
 ## Executive Summary Page
 ### Card Visuals
@@ -140,7 +142,9 @@ The "Total Revenue by Store Type" and "Total Revenue by Country" donut charts we
 The "Total Orders by Product Category" bar chart was created by selecting the "Stacked Bar Chart" option from the "Build" pane. The Y-axis was set to "Category" from the "Products" table, and the X-axis was set to the "Total Orders" measure.
 
 ### KPI Visuals
-Three KPI visuals were created, to show quarterly performance of Revenue, Profit, and Orders against a target of 5% quarter-on-quarter. These were created by selecting "KPI" from the "Build" pane, and setting the Value to the corresponding Total measure, the Target to the corresponding Quarterly Target, and the Trend axis to "Start of Quarter" from the "Dates" table's Date Hierarchy. 
+Three KPI visuals were created, to show quarterly performance of Revenue, Profit, and Orders against a target of 5% quarter-on-quarter. These were created by selecting "KPI" from the "Build" pane, and setting the Value to the corresponding Total measure, the Target to the corresponding Quarterly Target, and the Trend axis to "Start of Quarter" from the "Dates" table's Date Hierarchy.
+
+![Executive Summary Page](https://github.com/WillBoyer/data-analytics-power-bi-report356/blob/main/screenshots/Executive%20Summary.PNG)
 
 ## Product Detail Page
 ### Gauge Visuals
@@ -165,6 +169,8 @@ The Top 10 Products table is created and filtered in a similar way to the "Top 2
 
 ### Scatter Graph
 A Scatter Graph was created to show Profit per Item vs Quantity Sold of each Product, with a Legend set to Product Category.
+
+![Product Detail Page](https://github.com/WillBoyer/data-analytics-power-bi-report356/blob/main/screenshots/Product.PNG)
 
 ## Stores Map Page
 ### Map Visual
@@ -207,6 +213,11 @@ The "Profit YTD and Profit Goal" gauge visual from the Stores Drillthrough page 
 
 Finally, returning to the Stores Map page, in the Format pane for the map visual, Properties > Tooltips > Options > Type > Report Page and Page > Store Tooltip were selected to attach tht new tooltip page.
 
+![Stores Map Page](https://github.com/WillBoyer/data-analytics-power-bi-report356/blob/main/screenshots/Stores.PNG)
+
+![Stores Drillthrough Page](https://github.com/WillBoyer/data-analytics-power-bi-report356/blob/main/screenshots/Stores%20Drillthrough.PNG)
+
+![Stores Tooltip Page](https://github.com/WillBoyer/data-analytics-power-bi-report356/blob/main/screenshots/Stores%20Tooltip.PNG)
 
 ## Cross-Filtering
 The following instances of cross-filtering between visuals were blocked:
