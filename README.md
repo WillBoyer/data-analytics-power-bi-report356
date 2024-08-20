@@ -115,6 +115,8 @@ The "Full Name" field is show by simply dragging-and-dropping the "Top Customer"
 ### Date Slicer
 A new date slicer was created by selecting the "Slicer" option from the "Build" pane, and setting the field to "Year" from the "Dates" table. In "Format" > "Sicer settings" > "Options", "Style" was set to "Between", which allows for a minimum and maximum year to be selected by the user.
 
+
+
 ## Executive Summary Page
 ### Card Visuals
 Card visuals were created for the following measures:
@@ -142,22 +144,27 @@ Three KPI visuals were created, to show quarterly performance of Revenue, Profit
 
 ## Product Detail Page
 ### Gauge Visuals
+Three Gauge visuals were created to display Total Profit, Revenue, and Orders from the current quarter, compared to a Quarterly target of 10% more than the previous quarter. The Current Quarter performance was set as the Value in each case, while the Quarterly Target was set as the Maximum Value.
 
+Additionally, in Format > Visual > Callout value > Values Color, Conditional Formatting was selected and the following rules were added:
+- If value >= Min and < 0 then [Red]
+- If value >= 0 and <= Max then [Black]
+
+The values being tracked are the Quarterly Profit/Revenue/Orders Performance measures, which are calculated by subtracting the Current Quarter measure from the corresponding Quarterly Target measure. As a result, if the value is positive, then the quarterly performance exceeds the target, the callout value will be black. Otherwise, the callout value will be red.
 
 ### Filter State Cards
-
+Two Card visuals were created to display the Product Category and Country selections chosen from the Slicer Toolbar. The below DAX functions were used to make this possible:
+- `Category Selection = IF(ISFILTERED(Products[Category]), SELECTEDVALUE(Products[Category], "No Selection"), "No Selection")`
+- `Country Selection = IF(ISFILTERED(Stores[Country]), SELECTEDVALUE(Stores[Country],"No Selection")`
 
 ### Area Charts
-
+An area chart was created by selecting "Stacked Area Chart" from the "Build" pane. The X-axis is the "Dates" table's "Start of Quarter" column, the Y-axis is the "Total Revenue" measure, and the Legend is the "Category" column from the "Products" table.
 
 ### Top Products Table
-
+The Top 10 Products table is created and filtered in a similar way to the "Top 20 Customers" table in the "Customer Detail" page.
 
 ### Scatter Graph
-
-
-### Slicer Toolbar
-
+A Scatter Graph was created to show Profit per Item vs Quantity Sold of each Product, with a Legend set to Product Category.
 
 ## Stores Map Page
 ### Map Visual
@@ -182,13 +189,16 @@ A new Drillthrough page was created to display information on any store selected
 A back button to return to the Stores Map page was created using Insert > Elements > Buttons > Back.
 
 #### Store Region Card
-
+This card shows the region location of the store selected on the Stores Map page.
 
 #### Performance Gauges
+Two performance gauges display the Profit YTD vs. Profit Goal and Revenue YTD vs. Revenue Goal for the selected store. These have been set to use Profit/Revenue YTD as the Value, and Profit/Revenue Goal as the Target.
 
 #### Bar Chart
+A bar chart showing the Total Orders at the selected store, divided by Product Category, was created by selecting "Stacked Column Chart" from the "Build" pane. X-axis was set to "Category" from the "Products" table, and Y-axis was set to the Total Orders measure.
 
 #### Top 5 Products
+A table of the Top 5 products by Profit YTD was created in the same manner as the Top 20 Customers table from the Customer Detail page.
 
 ### Tooltip Page
 A tooltip page was created, to display the Profit YTD vs. Profit Goal when mousing-over any store. This was achieved by clicking "+" at the bottom of the Power BI Desktop window, then selecting Page Information > Page type > Tooltip in the Format pane.
