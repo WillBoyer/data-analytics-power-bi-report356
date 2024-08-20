@@ -170,12 +170,32 @@ Additional setting were configured in the Format(Visual) pane, including:
 - Map settings > Controls > Lasso button > Off
 
 ### Country Slicer
-A slicer was added to select country from Germany, UK, and USA, by selecting "Slicer" from the "Build" pane. 
+A slicer was added to select country from Germany, UK, and USA, by selecting "Slicer" from the "Build" pane. The Field was set to "Country" from the "Stores" table, and the following formatting was configured in the "Format" pane:
+- Slicer settings > Options > Style > Tile
+- Slicer settings > Selection > Multi-select with Ctrl > On
+- Slicer settings > Selection > Show "Select all" option > On
 
 ### Drillthrough Page
+A new Drillthrough page was created to display information on any store selected from the Stores Map page.
 
+#### Back Button
+A back button to return to the Stores Map page was created using Insert > Elements > Buttons > Back.
+
+#### Store Region Card
+
+
+#### Performance Gauges
+
+#### Bar Chart
+
+#### Top 5 Products
 
 ### Tooltip Page
+A tooltip page was created, to display the Profit YTD vs. Profit Goal when mousing-over any store. This was achieved by clicking "+" at the bottom of the Power BI Desktop window, then selecting Page Information > Page type > Tooltip in the Format pane.
+
+The "Profit YTD and Profit Goal" gauge visual from the Stores Drillthrough page was copied over to this new tooltip page.
+
+Finally, returning to the Stores Map page, in the Format pane for the map visual, Properties > Tooltips > Options > Type > Report Page and Page > Store Tooltip were selected to attach tht new tooltip page.
 
 
 ## Cross-Filtering
