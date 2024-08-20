@@ -80,7 +80,7 @@ The `Geography` hierarchy (part of the `Stores` table) is as follows:
 - `Country`
 - `Country Region`
 
-![Data Model]()
+![Data Model](https://github.com/WillBoyer/data-analytics-power-bi-report356/blob/main/Data%20Model.PNG)
 
 ## Customer Detail Page
 ### Headline Card Visuals
